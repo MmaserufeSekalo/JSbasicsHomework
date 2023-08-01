@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .mood{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        font-size: 50px;
+      }
       .heading {
         text-align: center;
         color: rgb(41, 106, 84);
@@ -26,7 +32,7 @@
         width: 300px;
         display: block;
         margin: 0 auto;
-        padding: 10px;
+        padding: 5px;
         transition: 1500ms all ease;
       }
       button:hover,
@@ -49,7 +55,7 @@
     <div class="container">
       <span class="mood"></span>
       <h2 class="heading">
-        Currently <span class="temp">21° C</span> in
+        Currently <span class="temp">21</span>° C in
         <span class="city">Polokwane</span>
       </h2>
       <h4 class="min-max">13° / 23°</h4>
@@ -83,7 +89,6 @@
       <button>Change city</button>
     </div>
     <script>
-       
       function changeCity() {
         let city = prompt("In what city are you?");
         let temperature = prompt("What temperature is it?");
@@ -91,7 +96,14 @@
         let currentTemp = document.querySelector(".temp");
         currentCity.innerHTML = city;
         currentTemp.innerHTML = temperature;
-       moodChanger
+        let emoji = document.querySelector(".mood");
+        if (temperature >= 18) {
+          
+          emoji.innerHTML="😂"
+        }
+        else{
+          emoji.innerHTML="😞";
+        }
       }
       let button = document.querySelector("button");
       button.addEventListener("click", changeCity);
