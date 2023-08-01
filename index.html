@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .heading {
+        text-align: center;
+        color: rgb(41, 106, 84);
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .min-max {
+        text-align: center;
+        margin: 0;
+        color: rgb(33, 120, 91);
+      }
+      .forecast {
+        list-style: none;
+        text-align: center;
+      }
+      li {
+        border: 1px solid rgb(33, 120, 91);
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        transition: 1500ms all ease;
+      }
+      button:hover,
+      li:hover {
+        background: rgb(33, 120, 91);
+        color: white;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 40%;
+        background: none;
+        border: 2px dashed rgb(41, 106, 84);
+        transition: 1500ms all ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="mood"></span>
+      <h2 class="heading">
+        Currently <span class="temp">21° C</span> in
+        <span class="city">Polokwane</span>
+      </h2>
+      <h4 class="min-max">13° / 23°</h4>
+      <ul class="forecast">
+        <li>
+          <h5>Tomorrow</h5>
+          <br />
+          9°/17°
+        </li>
+        <li>
+          <h5>Tomorrow</h5>
+          <br />
+          7°/15°
+        </li>
+        <li>
+          <h5>Thursday</h5>
+          <br />
+          10°/20°
+        </li>
+        <li>
+          <h5>Friday</h5>
+          <br />
+          12/23°
+        </li>
+        <li>
+          <h5>Saturday</h5>
+          <br />
+          10°/20°
+        </li>
+      </ul>
+      <button>Change city</button>
+    </div>
+    <script>
+       
+      function changeCity() {
+        let city = prompt("In what city are you?");
+        let temperature = prompt("What temperature is it?");
+        let currentCity = document.querySelector(".city");
+        let currentTemp = document.querySelector(".temp");
+        currentCity.innerHTML = city;
+        currentTemp.innerHTML = temperature;
+       moodChanger
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
